@@ -10,7 +10,7 @@ Folders:
 - `example/` – a tiny function and its tests. Read `test_example.py` if pytest is new to you.
 - `demo/` – the AI demo. `shipping.py` is the code; `SPEC.md` is what it is supposed to do.
 - `swap/` – the mutation swap. `grading.py` has three functions with specs in their docstrings.
-- `decompose/` – a function that is hard to test. Make it testable, then test it.
+- `decompose/` – a function you can't easily test. Make it testable, then test it.
 - `.github/workflows/tests.yml` – runs `pytest` on every push and pull request.
 
 ## Mutation swap rules
@@ -24,7 +24,6 @@ Round 2 – plant a mutant (5 min)
 - Change ONE small thing in that function so it breaks the spec (flip `<` to `<=`, drop a rule, change a constant...).
 - Your goal: a real bug that their tests still pass. AI is allowed.
 - Run their tests. Red = your mutant was "killed". Green = it "survived" (their tests have a gap).
-- Write your mutant on the board, then undo it (`git checkout swap/grading.py` or Ctrl-Z).
 
 Pair A: `is_leap_year`   → attacks `late_penalty`
 Pair B: `late_penalty`   → attacks `letter_grade`

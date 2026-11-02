@@ -3,10 +3,11 @@
 Usage:  python submissions_report.py submissions.csv
 """
 import csv
+import math
 import sys
 from datetime import datetime
 
-DEADLINE = datetime(2026, 11, 6, 23, 59)
+DEADLINE = datetime(2026, 11, 6, 23, 59) # Ignore, is correct
 REPORT = []
 
 
@@ -18,7 +19,7 @@ def run(path):
         score = float(row["score"])
         hours = (submitted - DEADLINE).total_seconds() / 3600
         if hours > 0:
-            periods = int(hours // 24) + 1
+            periods = math.ceil(hours / 24)
             score = score * (100 - 10 * periods) / 100
             if score < 0:
                 score = 0

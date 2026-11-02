@@ -3,7 +3,7 @@
 - Any function named test_* in a file named test_*.py is a test.
 - A plain `assert` is the check. pytest shows both sides when it fails.
 - pytest.raises checks that an error happens.
-- Run with:  pytest -q
+- Run with:  python -m pytest -q
 """
 import pytest
 

@@ -2,8 +2,10 @@
 
 Setup (once):
 
-    pip install pytest
-    pytest -q          # from this folder; runs every test_*.py it finds
+    python -m pip install -r requirements.txt
+    python -m pytest -q    # from this folder; runs every test_*.py it finds
+
+If `python` isn't found, use `python3` on Mac/Linux or `py` on Windows (e.g. `py -m pytest -q`).
 
 Folders:
 
@@ -11,7 +13,7 @@ Folders:
 - `demo/` – the AI demo. `shipping.py` is the code; `SPEC.md` is what it is supposed to do.
 - `swap/` – the mutation swap. `grading.py` has three functions with specs in their docstrings.
 - `decompose/` – a function you can't easily test. Make it testable, then test it.
-- `.github/workflows/tests.yml` – runs `pytest` on every push and pull request.
+- `.github/workflows/tests.yml` – runs `python -m pytest` on every push and pull request.
 
 ## Mutation swap rules
 

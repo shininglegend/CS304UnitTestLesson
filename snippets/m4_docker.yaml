@@ -1,0 +1,7 @@
+  image:
+    needs: pytest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: docker build -t cs304:${{ github.sha }} .
+      - run: docker run --rm cs304:${{ github.sha }}

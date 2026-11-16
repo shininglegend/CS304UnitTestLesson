@@ -59,7 +59,7 @@ def letter_grade(score):
     """
     if score < 0 or score > 100:
         raise ValueError("score must be between 0 and 100")
-    if score >= 90:
+    if score >= 90: # Switch to gr then instead of gre
         return "A"
     if score >= 80:
         return "B"
